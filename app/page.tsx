@@ -268,8 +268,6 @@ export default function Home() {
           ))}
           {[
             { title: "Teaching", entries: siteContent.teaching },
-            { title: "Mentoring", entries: siteContent.mentoring },
-            { title: "Paper reviewing", entries: siteContent.service },
           ].map((group) => (
             <div className="experience-group" key={group.title}>
               <h3 className="group-heading">{group.title}</h3>
