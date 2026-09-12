@@ -25,7 +25,7 @@ html {
 }
 
 section[id] {
-  scroll-margin-top: 5.5rem;
+  scroll-margin-top: 7.5rem;
 }
 
 body {
@@ -80,13 +80,15 @@ img {
 h1,
 h2,
 h3,
+h4,
 p {
   margin: 0;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: var(--font-display), serif;
   font-weight: 500;
   letter-spacing: -0.03em;
@@ -450,10 +452,37 @@ h3 {
 }
 
 .citation-item h3,
+.citation-item h4,
 .timeline-item h3,
+.timeline-item h4,
 .project-head h3 {
   font-size: clamp(1.22rem, 2vw, 1.7rem);
   line-height: 1.12;
+}
+
+.citation-list + .experience-group,
+.experience-group + .experience-group {
+  margin-top: 2rem;
+}
+
+.experience-group .group-heading {
+  margin-bottom: 0.9rem;
+  color: var(--muted);
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.experience-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.8;
 }
 
 .citation-authors,
@@ -661,6 +690,10 @@ h3 {
 }
 
 @media (max-width: 920px) {
+  section[id] {
+    scroll-margin-top: 13rem;
+  }
+
   .section-split,
   .project-card {
     grid-template-columns: 1fr;

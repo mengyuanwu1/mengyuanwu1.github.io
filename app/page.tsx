@@ -161,19 +161,20 @@ export default function Home() {
                 <a href="https://sea-lab.space/" target="_blank" rel="noreferrer">
                   SEA Lab
                 </a>
-                . My research spans{" "}
-                <b>human-computer interaction, AI agents, multimodal machine learning, and everyday sensing</b>.
-                I design and engineer human-AI systems end-to-end and study how these systems can be made robust enough
-                for real-world deployment through <b>in-the-wild longitudinal studies</b>. I am
-                especially interested in building efficient systems and models that support personalization, productivity, and
-                behavior change in real-world settings.
+                . I design, engineer, and evaluate <b>AI agentic systems</b> that interact with
+                people and their <b>multimodal context</b> to support personalization,
+                productivity, and well-being. My research spans <b>AI agents, multimodal
+                sensing, and human-computer interaction</b>. I am especially interested in
+                building efficient, robust, and adaptive systems that can operate persistently
+                and be meaningfully deployed and adopted in real-world settings.
               </p>
               <p>
-                I also work as a part-time full-stack developer at{" "}
+                I also work as a part-time full-stack software engineer at{" "}
                 <a href="https://equahealth.io/" target="_blank" rel="noreferrer">
                   Equa Health
                 </a>
-                , a CMU-based startup. In my free time, I like to tinker with creative software and hardware
+                , a CMU-funded startup. In Fall 2026, I am a teaching assistant for COMS W4995:
+                The Future of Personal Health Assistant at Columbia. In my free time, I like to tinker with creative software and hardware
                 projects that could bring a positive impact. Additionally, I'm a huge foodie and love to explore different restaurants in NYC.
               </p>
             </div>
@@ -220,6 +221,63 @@ export default function Home() {
               </article>
             ))}
           </div>
+          <div className="experience-group">
+            <h3 className="group-heading">Manuscripts under review</h3>
+            <div className="citation-list">
+              {siteContent.manuscripts.map((item) => (
+                <article className="citation-item" key={item.title}>
+                  <div>
+                    <h4>{item.title}</h4>
+                    <p className="citation-authors">{highlightOwnName(item.authors)}</p>
+                    <p className="citation-venue">{item.status}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="editorial-section section-split" id="experience">
+        <div className="section-aside">
+          <p className="eyebrow">Experience</p>
+          <div className="section-rule" style={{ ["--rule-width" as string]: "10ch" }} />
+        </div>
+        <div className="section-main editorial-list-section">
+          {[
+            { title: "Research", entries: siteContent.researchExperience },
+            { title: "Industry", entries: siteContent.industryExperience },
+          ].map((group) => (
+            <div className="experience-group" key={group.title}>
+              <h3 className="group-heading">{group.title}</h3>
+              <div className="timeline-list">
+                {group.entries.map((item) => (
+                  <article className="timeline-item" key={`${item.organization}-${item.title}`}>
+                    <p className="timeline-year">{item.years}</p>
+                    <div>
+                      <h4>{item.title}</h4>
+                      <p className="timeline-meta">
+                        {item.organization}{item.location ? ` · ${item.location}` : ""}
+                      </p>
+                      {item.detail ? <p className="timeline-detail">{item.detail}</p> : null}
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          ))}
+          {[
+            { title: "Teaching", entries: siteContent.teaching },
+            { title: "Mentoring", entries: siteContent.mentoring },
+            { title: "Paper reviewing", entries: siteContent.service },
+          ].map((group) => (
+            <div className="experience-group" key={group.title}>
+              <h3 className="group-heading">{group.title}</h3>
+              <ul className="experience-list">
+                {group.entries.map((item) => <li key={item}>{item}</li>)}
+              </ul>
+            </div>
+          ))}
         </div>
       </section>
 

@@ -1,5 +1,7 @@
 import { withBasePath } from "../lib/sitePaths";
 
+const cvHref = withBasePath("/Mengyuan_Wu_CV_08012026.pdf");
+
 export const siteContent = {
   name: "Mengyuan (Millie) Wu",
   shortName: "Millie Wu",
@@ -13,7 +15,7 @@ export const siteContent = {
   email: "mw3209@columbia.edu",
   website: "milliewu.io",
   phone: "(617) 992-4468",
-  cvHref: withBasePath("/Mengyuan_Wu_CV_032026.pdf"),
+  cvHref,
   socialLinks: {
     linkedin: "https://www.linkedin.com/in/millie-wu/",
     github: "https://github.com/mengyuanwu1",
@@ -25,15 +27,16 @@ export const siteContent = {
   navigation: [
     { label: "About", href: withBasePath("/#about") },
     { label: "Publications", href: withBasePath("/#publications") },
+    { label: "Experience", href: withBasePath("/#experience") },
     { label: "News", href: withBasePath("/#news") },
     { label: "Projects", href: withBasePath("/#projects") },
-    { label: "CV", href: withBasePath("/Mengyuan_Wu_CV_032026.pdf"), external: true },
+    { label: "CV", href: cvHref, external: true },
   ],
   heroTags: ["Researcher", "Developer", "Inventor"],
   heroSummary: [
     "I am a first-year Ph.D. student in Computer Science at Columbia University, advised by Prof. Xuhai \"Orson\" Xu in the SEA Lab.",
-    "My research lies at the intersection of human-computer interaction, AI agents, and multimodal machine learning.",
-    "I also work as a part-time full-stack developer at Equa Health, a CMU-based startup.",
+    "I design, engineer, and evaluate AI agentic systems that use multimodal context to support personalization, productivity, and well-being.",
+    "I also work as a part-time full-stack software engineer at Equa Health, a CMU-funded startup.",
   ],
   researchInterests: ["Applied AI", "Agentic systems", "Human-Computer Interaction", "Behavioral health", "Multimodal AI systems", "Personalization"],
   education: [
@@ -90,32 +93,34 @@ export const siteContent = {
       location: "",
       detail: "",
     },
-    {
-      years: "2019-2021",
-      title: "Investment Research Associate",
-      organization: "Citigroup Capital Markets",
-      location: "",
-      detail: "",
-    },
   ],
   honors: [
     "ACM CHI 2026 Honorable Mention Award (top 5%)",
+    "Best Poster Award, ACM CHI 2026 Workshop (PAWS)",
     "2nd Place, Intel AI Track Hackathon (HooHacks, University of Virginia)",
     "1st Place, NeuReality AR/VR Competition (Columbia University)",
     "Tau Beta Pi Engineering Honors (top one-eighth)",
     "Davis UWC Scholar",
   ],
   teaching: [
-    "Fall 2024: COMS W4995 Applied Machine Learning, Course Teaching Assistant",
-    "Spring 2019: IEOR E3609 Advanced Optimization, Course Teaching Assistant",
+    "Fall 2026: COMS W4995 The Future of Personal Health Assistant, Teaching Assistant",
+    "Fall 2024: COMS W4995 Applied Machine Learning, Course Assistant",
+    "Spring 2019: IEOR E3609 Advanced Optimization, Course Assistant",
   ],
   mentoring: [
+    "2026: Xin Guan (Tsinghua University B.S.)",
+    "2026: Irene Nam (Columbia University B.S., M.S.)",
+    "2026: Annie Wang (Columbia University B.S.)",
     "2025: Akito Yamauchi (Columbia University B.S.)",
-    "2024-2025: Zeyi Tong (Columbia University B.S.)",
+    "2025: Zeyi Tong (Columbia University B.S.)",
   ],
   service: [
-    "ACM CHI Conference on Human Factors in Computing Systems (2026), paper reviewer",
-    "ACM Transactions on Computing for Healthcare (2025), reviewer",
+    "2026: IEEE Internet Computing",
+    "2026: ACM CHI Conference on Human Factors in Computing Systems (2027)",
+    "2026: ACM Symposium on User Interface Software and Technology (UIST 2026)",
+    "2026: Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT)",
+    "2025: ACM CHI Conference on Human Factors in Computing Systems (2026)",
+    "2025: ACM Transactions on Computing for Healthcare",
   ],
   press: [
     {
@@ -172,6 +177,16 @@ export const siteContent = {
     {
       year: "2026",
       title:
+        "Augmenting Human Performance with an XR Agent Learning from Online Behavior and BCI Evidence.",
+      authors:
+        "Li, Z.*, He, X.*, Chen, H.*, Zuo, J.*, Bai, S., Yang, B., Wu, Mengyuan, Ledner, J., Cheng, Y., Yamauchi, A., Turakhia, D. G., Feiner, S., Sajda, P.",
+      venue: "ACM UIST 2026",
+      note: "",
+      links: [],
+    },
+    {
+      year: "2026",
+      title:
         "MindfulAgents: Personalizing Mindfulness Meditation via an Expert-Aligned Multi-Agent System.",
       authors:
         "Wu, Mengyuan, Jiang, Z.*, Fan, Y.*, Feng, R., Dharmavaram, S., Fallon, S., Polowitz, M., Islam, B., Benson, L., Tung, I., Creswell, J. D., Xu, X.",
@@ -199,6 +214,57 @@ export const siteContent = {
       venue: "ACM CHI 2026",
       note: "",
       links: [],
+    },
+    {
+      year: "2026",
+      title:
+        "PAWS: Empowering Everyday Cannabis Use Disorder Support through a Personalized AI Digital Pet on Smartwatches.",
+      authors:
+        "Jiang, Z., Wu, Mengyuan, Zou, R., Xu, S., Macmaunus, E., Liao, S., Zhang, P., Wang, D., David, J. L., El-Bassel, N., Mamykina, L., Levin, F. R., Sultan, R., Xu, X.",
+      venue: "ACM CHI 2026 Workshop",
+      note: "Best Poster Award",
+      links: [],
+    },
+  ],
+  manuscripts: [
+    {
+      title:
+        '"Live Your Day, Twice": A Multi-Modal Agentic Mental Rehearsal Framework for Closing the Intention-Action Gap.',
+      authors:
+        "Wu, Mengyuan, Guan, X.*, Nam, Y.*, Chung, R., Wang, K., Wang, Z., Xu, Z., Babbit, E., Bloom, P., Funkhouser, C., Mishra, S., Xu, X.",
+      status: "Submitted to ACM CHI 2027",
+    },
+    {
+      title:
+        "Deco: Making Physical Companions Pervasive through a Dual-Embodiment Framework.",
+      authors:
+        "Jiang, Z.*, Wu, Mengyuan*, Zou, R., Xu, S., Xu, X.",
+      status: "Submitted to ACM CHI 2027",
+    },
+    {
+      title:
+        "ExTENDS: Empowering Domain Experts to Build Personalized AI Proxies for Asynchronous Patient Care.",
+      authors:
+        "Chung, R., Li, M.*, Wu, Mengyuan*, Pollack, A., Pratt, W., Mamykina, L., Xu, X.",
+      status: "Submitted to ACM CHI 2027",
+    },
+    {
+      title:
+        "TimeSRL: Generalizable Time-Series Behavioral Modeling via Semantic RL-Tuned LLMs — A Case Study in Mental Health.",
+      authors:
+        "Fan, Y., Wu, Mengyuan, Chen, Q., Liu, X., Yang, Y., Zhang, Z., Nepal, S., Nie, J., Jiang, X., Xu, X.",
+      status: "Submitted to IMWUT 2026 · Under major revision",
+    },
+    {
+      title: "Agents’ Last Exam.",
+      authors: "Sun, Y., et al. (Mengyuan Wu, co-author)",
+      status: "Submitted to NeurIPS 2026 Evaluations and Datasets Track",
+    },
+    {
+      title:
+        "Sharpen Before You Adapt: Data-Free Entry-State Sharpening for Test-Time Reinforcement Learning.",
+      authors: "Zhang, Z.*, Selvendran, V.*, Wu, Mengyuan",
+      status: "Submitted to NeurIPS 2026 Workshop",
     },
   ],
   projects: [
