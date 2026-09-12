@@ -131,6 +131,28 @@ export const siteContent = {
   ],
   news: [
     {
+      date: "Fall 2026",
+      titlePrefix: "I'm a teaching assistant for ",
+      linkText: "The Future of Personal Health Assistant",
+      linkHref: "https://personal-health-agent.github.io/",
+      titleSuffix: " (BINF 4070 / COMS W4995) at Columbia University.",
+    },
+    {
+      date: "2026",
+      titlePrefix: "Our PAWS project was showcased at ",
+      linkText: "Columbia's 2026 AI at VP&S Showcase",
+      linkHref: "https://www.dbmi.columbia.edu/aivps-2026-showcase/",
+      titleSuffix: ", with Zhihan Jiang presenting the team's demo.",
+    },
+    {
+      date: "2026",
+      titlePrefix: "PAWS received the ",
+      linkText: "Best Poster Award",
+      linkHref: "https://zhihanjiang.com/papers/CV_zhihanjiang_public.pdf",
+      titleSuffix:
+        " at the Everyday Wearable for Personalized Health and Well-Being Workshop at ACM CHI 2026!",
+    },
+    {
       date: "3/14/2026",
       titlePrefix: "Our paper was featured in SciPaperMill's article, ",
       linkText: '"Mental Health: Unpacking the AI Revolution in Therapeutic Support."',
@@ -141,6 +163,11 @@ export const siteContent = {
     {
       date: "3/8/2026",
       title: "MindfulAgents received an Honorable Mention Award at ACM CHI 2026!",
+    },
+    {
+      date: "2/26/2026",
+      title:
+        'Our U.S. provisional patent application for "Method for Generating a Meditation Protocol" was filed (No. 63/991,687), with Equa Health, Inc. as assignee.',
     },
     {
       date: "2/11/2026",
